@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+#rightWheel, #leftWheel {
+    animation-name: wheel;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#boyAndBikeFrame {
+    animation-name: bike;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    transform-origin: bottom;
+}
+
+#hat {
+    animation-name: hat;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 150ms;
+}
+
+@keyframes wheel {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes bike {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(20deg);
+    }
+}
+
+@keyframes hat {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(6%);
+    }
+}
